@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    position: relative;
+    padding-bottom: 10rem;
+}
+/* ########## HEADER ########## */
+.title{
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+.sumary__text{
+    width: 600px;
+    margin: 0;
+    position: relative;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 14px;	
+    font-style: italic;
+    color: #4F4F4F;
+}
+.sumary__text::before{
+    content: "";
+    display: block;
+    background-image: url(img/6dots.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: -24px;
+    width: 13px;
+    height: 8px;
+}
+/* ########## MAIN ########## */
+.cover-picture{
+    max-width: 1200px;
+    margin: 0;
+    padding-top: 40px;
+}
+.cover-img{
+    width: 100%;
+    display: block;
+}
+.main{
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.content{
+    width: 600px;
+}
+.content p{
+    line-height: 24px;
+}
+.ingredients__title, .instructions__title{
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;	
+    font-weight: 700;
+}
+.ingredients__subtitle{
+    margin: 30px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;	
+    font-style: italic;
+    font-weight: 400;
+}
+.ingredients__description{
+    display: flex;
+    margin: .5rem 0;
+}
+.ingredients__description p{
+    margin: 0;
+}
+.ingredients__description input{
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+}
+.instructions{
+    margin-top: 40px;
+}
+.instructions__title{
+    margin-bottom: 30px;
+}
+.instructions__item{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.instructions__number{
+    width: 36px;
+    height: 36px;
+    background-color: #F2994A;
+    border-radius: 5px;
+    position: relative;
+}
+.instructions__number span{
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    transform: translate(-50%);
+}
+.instructions__description{
+    width: 90%;
+    margin: 0;
+}
+.source{
+    font-weight: 400;
+    font-style: italic;
+    color: #BDBDBD;
+    margin-top: 4rem;
+}
+.aside{
+    width: 250px;
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+.aside__item{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+.aside__icon{
+ display: block;
+}
+.aside__text{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+.aside__title{
+    text-transform: uppercase;
+    color: #BDBDBD;
+    font-size: 10px;
+    font-weight: 700;
+}
+.aside__description{
+    font-size: 14px;
+    font-weight: 500;
+}
+.aside :nth-child(1) .aside__description{
+    color: #F2994A;
+}
+/* ########## FOOTER ########## */
+.footer{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+}
+.author, .author a{
+    color: #BDBDBD;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 1.3rem;
+}
+/* ########## MEDIA QUERIES ########## */
+
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 24px;
+    }
+    .sumary__text{
+        width: 95%;
+        font-size: 12px;	
+    }
+    .cover-picture {
+        padding-top: 30px;
+    }
+    .main{
+        flex-direction: column;
+        margin-top: 5px;
+        gap: 1rem;
+    }
+    .content{
+        width: 100%;
+    }
+    .aside{
+        order: -1;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .aside__item{
+        
+        width: initial;
+    }
+    .aside__title{
+        font-size: 9px;
+    }
+    .aside__description{
+        font-size: 12px;
+    }
+    .ingredients__title, .instructions__title{
+        font-size: 18px;	
+    }
+    .ingredients__subtitle{
+        font-size: 16px;	
+    }
+    .content p {
+        font-size: 14px;
+    }
+    .source{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 425px){
+    .aside .aside__item:nth-child(1){
+        width: 100%;
+    }
+    .aside{
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .aside__item{
+        gap: .5rem;
+    }
+    .aside__icon{
+        width: 25px;
+        height: 25px;
+    }
+}
